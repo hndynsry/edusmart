@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSmart - Platform Belajar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <div class="logo-icon">E</div>
+            <span>Edu<span>Smart</span></span>
+        </div>
+
+        <nav class="menu">
+            <p class="menu-title">MENU UTAMA</p>
+
+            <a href="#" class="menu-item active" data-page="dashboard">
+                <span>🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="courses">
+                <span>📚</span>
+                <span>Pelajaran</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="assignments">
+                <span>📝</span>
+                <span>Tugas</span>
+                <span class="badge">4</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="schedule">
+                <span>📅</span>
+                <span>Jadwal</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="grades">
+                <span>📊</span>
+                <span>Nilai</span>
+            </a>
+
+            <p class="menu-title">LAINNYA</p>
+
+            <a href="#" class="menu-item" data-page="quiz">
+                <span>🧠</span>
+                <span>Kuis</span>
+            </a>
+
+            <a href="#" class="menu-item" data-page="settings">
+                <span>⚙️</span>
+                <span>Pengaturan</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="upgrade-card">
+                <div class="upgrade-icon">🚀</div>
+                <strong>Upgrade Belajar</strong>
+                <p>Dapatkan fitur belajar lebih lengkap.</p>
+                <button>Upgrade</button>
+            </div>
+
+            <div class="sidebar-profile">
+                <div class="avatar">AR</div>
+                <div>
+                    <strong>Ahmad Rizky</strong>
+                    <small>Siswa</small>
+                </div>
+                <span>⋮</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Cari pelajaran, tugas, materi...">
+            </div>
+
+            <div class="header-right">
+                <button class="icon-button" id="notificationBtn">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile">
+                    <div class="avatar">AR</div>
+                    <div class="profile-info">
+                        <strong>Ahmad Rizky</strong>
+                        <small>Kelas XI IPA 1</small>
+                    </div>
+                    <span>⌄</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Dashboard Page -->
+            <div class="page active" id="dashboardPage">
+
+                <div class="welcome">
+                    <div>
+                        <p class="greeting">Selamat pagi, Ahmad! 👋</p>
+                        <h1>Siap belajar hari ini?</h1>
+                        <p class="welcome-text">
+                            Tetap semangat dan raih hasil terbaikmu.
+                        </p>
+                    </div>
+                    <div class="welcome-illustration">🎓</div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">📚</div>
+                        <div>
+                            <span>Total Pelajaran</span>
+                            <h2>12</h2>
+                            <small class="positive">↑ 2 minggu ini</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">📝</div>
+                        <div>
+                            <span>Tugas Aktif</span>
+                            <h2>4</h2>
+                            <small class="warning">2 segera berakhir</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">📈</div>
+                        <div>
+                            <span>Rata-rata Nilai</span>
+                            <h2>87.5</h2>
+                            <small class="positive">↑ 4.2% dari bulan lalu</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">⏱️</div>
+                        <div>
+                            <span>Jam Belajar</span>
+                            <h2>24.5</h2>
+                            <small class="positive">↑ 12% minggu ini</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <!-- Courses -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <div>
+                                <h2>Pelajaran Saya</h2>
+                                <p>Continue learning</p>
+                            </div>
+                            <button class="text-button" data-page-link="courses">
+                                Lihat semua →
+                            </button>
+                        </div>
+
+                        <div class="course-list">
+
+                            <div class="course-item">
+                                <div class="course-icon math">∑</div>
+                                <div class="course-info">
+                                    <div class="course-title">
+                                        <strong>Matematika</strong>
+                                        <span>75%</span>
+                                    </div>
+                                    <p>Integral & Turunan</p>
+                                    <div class="progress">
+                                        <div class="progress-bar blue-progress" style="width:75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <div class="course-icon physics">⚛</div>
+                                <div class="course-info">
+                                    <div class="course-title">
+                                        <strong>Fisika</strong>
+                                        <span>62%</span>
+                                    </div>
+                                    <p>Gelombang & Bunyi</p>
+                                    <div class="progress">
+                                        <div class="progress-bar purple-progress" style="width:62%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course-item">
+                                <div class="course-icon english">A</div>
+                                <div class="course-info">
+                                    <div class="course-title">
+                                        <strong>Bahasa Inggris</strong>
+                                        <span>88%</span>
+                                    </div>
+                                    <p>Grammar & Vocabulary</p>
+                                    <div class="progress">
+                                        <div class="progress-bar green-progress" style="width:88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Schedule -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <div>
+                                <h2>Jadwal Hari Ini</h2>
+                                <p>Senin, 31 Agustus 2026</p>
+                            </div>
+                            <button class="text-button" data-page-link="schedule">
+                                Semua →
+                            </button>
+                        </div>
+
+                        <div class="schedule-list">
+
+                            <div class="schedule-item current">
+                                <div class="time">
+                                    <strong>10:30</strong>
+                                    <span>11:30</span>
+                                </div>
+                                <div class="schedule-line"></div>
+                                <div class="schedule-info">
+                                    <strong>Matematika</strong>
+                                    <p>Integral & Turunan</p>
+                                    <span class="room">Ruang 201</span>
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="time">
+                                    <strong>13:00</strong>
+                                    <span>14:30</span>
+                                </div>
+                                <div class="schedule-line"></div>
+                                <div class="schedule-info">
+                                    <strong>Fisika</strong>
+                                    <p>Gelombang</p>
+                                    <span class="room">Lab Fisika</span>
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="time">
+                                    <strong>15:00</strong>
+                                    <span>16:00</span>
+                                </div>
+                                <div class="schedule-line"></div>
+                                <div class="schedule-info">
+                                    <strong>Bahasa Inggris</strong>
+                                    <p>Speaking Practice</p>
+                                    <span class="room">Ruang 105</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assignments -->
+                <div class="section-card assignment-card">
+                    <div class="section-header">
+                        <div>
+                            <h2>Tugas Terbaru</h2>
+                            <p>Jangan sampai terlambat mengumpulkan tugas</p>
+                        </div>
+                        <button class="text-button" data-page-link="assignments">
+                            Lihat semua →
+                        </button>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tugas</th>
+                                    <th>Mata Pelajaran</th>
+                                    <th>Deadline</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>Latihan Integral</strong>
+                                        <small>20 soal pilihan ganda</small>
+                                    </td>
+                                    <td>Matematika</td>
+                                    <td>Hari ini, 23:59</td>
+                                    <td><span class="status urgent">Segera</span></td>
+                                    <td><button class="action-btn">Kerjakan</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Makalah Gelombang</strong>
+                                        <small>Minimal 5 halaman</small>
+                                    </td>
+                                    <td>Fisika</td>
+                                    <td>2 Sep 2026</td>
+                                    <td><span class="status pending">Belum</span></td>
+                                    <td><button class="action-btn">Detail</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>English Presentation</strong>
+                                        <small>Presentasi 10 menit</small>
+                                    </td>
+                                    <td>Bahasa Inggris</td>
+                                    <td>5 Sep 2026</td>
+                                    <td><span class="status pending">Belum</span></td>
+                                    <td><button class="action-btn">Detail</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Courses Page -->
+            <div class="page" id="coursesPage">
+                <div class="page-title">
+                    <div>
+                        <h1>Pelajaran Saya 📚</h1>
+                        <p>Kelola dan lanjutkan pembelajaranmu.</p>
+                    </div>
+                </div>
+
+                <div class="all-courses">
+
+                    <div class="big-course-card">
+                        <div class="big-course-icon math">∑</div>
+                        <span class="course-label">WAJIB</span>
+                        <h2>Matematika</h2>
+                        <p>Integral, turunan, limit, dan fungsi.</p>
+                        <div class="course-meta">
+                            <span>📖 24 Materi</span>
+                            <span>🎯 75%</span>
+                        </div>
+                        <button class="primary-btn">Lanjutkan Belajar</button>
+                    </div>
+
+                    <div class="big-course-card">
+                        <div class="big-course-icon physics">⚛</div>
+                        <span class="course-label">WAJIB</span>
+                        <h2>Fisika</h2>
+                        <p>Gelombang, bunyi, listrik, dan mekanika.</p>
+                        <div class="course-meta">
+                            <span>📖 19 Materi</span>
+                            <span>🎯 62%</span>
+                        </div>
+                        <button class="primary-btn">Lanjutkan Belajar</button>
+                    </div>
+
+                    <div class="big-course-card">
+                        <div class="big-course-icon english">A</div>
+                        <span class="course-label">WAJIB</span>
+                        <h2>Bahasa Inggris</h2>
+                        <p>Grammar, vocabulary, speaking, dan writing.</p>
+                        <div class="course-meta">
+                            <span>📖 27 Materi</span>
+                            <span>🎯 88%</span>
+                        </div>
+                        <button class="primary-btn">Lanjutkan Belajar</button>
+                    </div>
+
+                    <div class="big-course-card">
+                        <div class="big-course-icon biology">🧬</div>
+                        <span class="course-label">WAJIB</span>
+                        <h2>Biologi</h2>
+                        <p>Sel, genetika, ekosistem, dan sistem tubuh.</p>
+                        <div class="course-meta">
+                            <span>📖 21 Materi</span>
+                            <span>🎯 81%</span>
+                        </div>
+                        <button class="primary-btn">Lanjutkan Belajar</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Assignments Page -->
+            <div class="page" id="assignmentsPage">
+                <div class="page-title">
+                    <div>
+                        <h1>Tugas 📝</h1>
+                        <p>Daftar tugas dan deadline yang harus kamu selesaikan.</p>
+                    </div>
+                    <button class="primary-btn">+ Tambah Tugas</button>
+                </div>
+
+                <div class="assignment-filters">
+                    <button class="filter active">Semua</button>
+                    <button class="filter">Belum Dikerjakan</button>
+                    <button class="filter">Sedang Berjalan</button>
+                    <button class="filter">Selesai</button>
+                </div>
+
+                <div class="task-grid">
+                    <div class="task-card">
+                        <div class="task-top">
+                            <span class="subject-tag math-tag">Matematika</span>
+                            <span class="status urgent">Urgent</span>
+                        </div>
+                        <h2>Latihan Integral</h2>
+                        <p>Kerjakan 20 soal pilihan ganda mengenai integral tak tentu.</p>
+                        <div class="task-bottom">
+                            <span>⏰ Hari ini, 23:59</span>
+                            <button class="primary-btn small">Kerjakan</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card">
+                        <div class="task-top">
+                            <span class="subject-tag physics-tag">Fisika</span>
+                            <span class="status pending">Belum</span>
+                        </div>
+                        <h2>Makalah Gelombang</h2>
+                        <p>Buat makalah minimal 5 halaman mengenai fenomena gelombang.</p>
+                        <div class="task-bottom">
+                            <span>⏰ 2 Sep 2026</span>
+                            <button class="primary-btn small">Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card">
+                        <div class="task-top">
+                            <span class="subject-tag english-tag">Bahasa Inggris</span>
+                            <span class="status pending">Belum</span>
+                        </div>
+                        <h2>English Presentation</h2>
+                        <p>Siapkan presentasi berbahasa Inggris selama 10 menit.</p>
+                        <div class="task-bottom">
+                            <span>⏰ 5 Sep 2026</span>
+                            <button class="primary-btn small">Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule Page -->
+            <div class="page" id="schedulePage">
+                <div class="page-title">
+                    <div>
+                        <h1>Jadwal 📅</h1>
+                        <p>Jadwal pelajaran dan kegiatan belajarmu.</p>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <button>‹</button>
+                        <h2>Agustus 2026</h2>
+                        <button>›</button>
+                    </div>
+
+                    <div class="calendar-week">
+                        <span>Sen</span>
+                        <span>Sel</span>
+                        <span>Rab</span>
+                        <span>Kam</span>
+                        <span>Jum</span>
+                        <span>Sab</span>
+                        <span>Min</span>
+                    </div>
+
+                    <div class="calendar-days">
+                        <span class="muted">27</span>
+                        <span class="muted">28</span>
+                        <span class="muted">29</span>
+                        <span class="muted">30</span>
+                        <span class="muted">31</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                        <span>11</span>
+                        <span>12</span>
+                        <span>13</span>
+                        <span>14</span>
+                        <span>15</span>
+                        <span>16</span>
+                        <span>17</span>
+                        <span>18</span>
+                        <span>19</span>
+                        <span>20</span>
+                        <span>21</span>
+                        <span>22</span>
+                        <span>23</span>
+                        <span>24</span>
+                        <span>25</span>
+                        <span>26</span>
+                        <span>27</span>
+                        <span>28</span>
+                        <span>29</span>
+                        <span>30</span>
+                        <span class="today">31</span>
+                    </div>
+                </div>
+
+                <div class="section-card schedule-full">
+                    <div class="section-header">
+                        <div>
+                            <h2>Senin, 31 Agustus</h2>
+                            <p>3 jadwal hari ini</p>
+                        </div>
+                    </div>
+
+                    <div class="full-schedule-item">
+                        <span class="schedule-time">10:30 - 11:30</span>
+                        <div class="schedule-color blue"></div>
+                        <div>
+                            <strong>Matematika</strong>
+                            <p>Integral & Turunan • Ruang 201</p>
+                        </div>
+                    </div>
+
+                    <div class="full-schedule-item">
+                        <span class="schedule-time">13:00 - 14:30</span>
+                        <div class="schedule-color purple"></div>
+                        <div>
+                            <strong>Fisika</strong>
+                            <p>Gelombang • Lab Fisika</p>
+                        </div>
+                    </div>
+
+                    <div class="full-schedule-item">
+                        <span class="schedule-time">15:00 - 16:00</span>
+                        <div class="schedule-color green"></div>
+                        <div>
+                            <strong>Bahasa Inggris</strong>
+                            <p>Speaking Practice • Ruang 105</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grades Page -->
+            <div class="page" id="gradesPage">
+                <div class="page-title">
+                    <div>
+                        <h1>Nilai 📊</h1>
+                        <p>Perkembangan hasil belajar kamu.</p>
+                    </div>
+                </div>
+
+                <div class="grade-summary">
+                    <div class="grade-main">
+                        <span>Rata-rata Nilai</span>
+                        <strong>87.5</strong>
+                        <small>Excellent! 🎉</small>
+                    </div>
+
+                    <div class="grade-chart">
+                        <div class="chart-bars">
+                            <div class="bar" style="height:60%"><span>MTK</span></div>
+                            <div class="bar" style="height:75%"><span>FIS</span></div>
+                            <div class="bar" style="height:90%"><span>ENG</span></div>
+                            <div class="bar" style="height:82%"><span>BIO</span></div>
+                            <div class="bar" style="height:70%"><span>KIM</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-header">
+                        <h2>Detail Nilai</h2>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Mata Pelajaran</th>
+                                    <th>UTS</th>
+                                    <th>UAS</th>
+                                    <th>Tugas</th>
+                                    <th>Rata-rata</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Matematika</strong></td>
+                                    <td>84</td>
+                                    <td>88</td>
+                                    <td>86</td>
+                                    <td><strong>86</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fisika</strong></td>
+                                    <td>82</td>
+                                    <td>85</td>
+                                    <td>88</td>
+                                    <td><strong>85</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bahasa Inggris</strong></td>
+                                    <td>91</td>
+                                    <td>90</td>
+                                    <td>94</td>
+                                    <td><strong>92</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Biologi</strong></td>
+                                    <td>88</td>
+                                    <td>86</td>
+                                    <td>90</td>
+                                    <td><strong>88</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Page -->
+            <div class="page" id="quizPage">
+                <div class="page-title">
+                    <div>
+                        <h1>Kuis 🧠</h1>
+                        <p>Uji pemahamanmu dengan berbagai kuis.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-grid">
+                    <div class="quiz-card">
+                        <span class="quiz-icon">∑</span>
+                        <span class="subject-tag math-tag">Matematika</span>
+                        <h2>Quiz Integral</h2>
+                        <p>Uji kemampuanmu tentang integral dasar.</p>
+                        <div class="quiz-info">
+                            <span>10 Soal</span>
+                            <span>⏱ 15 Menit</span>
+                        </div>
+                        <button class="primary-btn start-quiz" data-quiz="Integral">
+                            Mulai Kuis
+                        </button>
+                    </div>
+
+                    <div class="quiz-card">
+                        <span class="quiz-icon">⚛</span>
+                        <span class="subject-tag physics-tag">Fisika</span>
+                        <h2>Quiz Gelombang</h2>
+                        <p>Seberapa paham kamu tentang gelombang?</p>
+                        <div class="quiz-info">
+                            <span>10 Soal</span>
+                            <span>⏱ 15 Menit</span>
+                        </div>
+                        <button class="primary-btn start-quiz" data-quiz="Gelombang">
+                            Mulai Kuis
+                        </button>
+                    </div>
+
+                    <div class="quiz-card">
+                        <span class="quiz-icon">A</span>
+                        <span class="subject-tag english-tag">English</span>
+                        <h2>Grammar Quiz</h2>
+                        <p>Test your English grammar skills.</p>
+                        <div class="quiz-info">
+                            <span>15 Soal</span>
+                            <span>⏱ 20 Menit</span>
+                        </div>
+                        <button class="primary-btn start-quiz" data-quiz="Grammar">
+                            Mulai Kuis
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div class="page" id="settingsPage">
+                <div class="page-title">
+                    <div>
+                        <h1>Pengaturan ⚙️</h1>
+                        <p>Atur preferensi akun dan aplikasi.</p>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+
+                    <div class="setting-section">
+                        <h2>Profil</h2>
+
+                        <div class="profile-setting">
+                            <div class="avatar large">AR</div>
+                            <div>
+                                <strong>Ahmad Rizky</strong>
+                                <p>Kelas XI IPA 1</p>
+                                <button class="text-button">Ubah foto</button>
+                            </div>
+                        </div>
+
+                        <label>
+                            Nama Lengkap
+                            <input type="text" value="Ahmad Rizky">
+                        </label>
+
+                        <label>
+                            Kelas
+                            <input type="text" value="XI IPA 1">
+                        </label>
+                    </div>
+
+                    <div class="setting-section">
+                        <h2>Preferensi</h2>
+
+                        <div class="toggle-setting">
+                            <div>
+                                <strong>Notifikasi</strong>
+                                <p>Terima pemberitahuan tugas dan jadwal.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-setting">
+                            <div>
+                                <strong>Mode Gelap</strong>
+                                <p>Gunakan tampilan gelap untuk aplikasi.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="darkMode">
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="primary-btn">Simpan Perubahan</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Notification -->
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+            <h3>Notifikasi</h3>
+            <button id="closeNotification">×</button>
+        </div>
+
+        <div class="notification-item">
+            <span>📝</span>
+            <div>
+                <strong>Tugas baru</strong>
+                <p>Guru Matematika menambahkan tugas baru.</p>
+                <small>10 menit lalu</small>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <span>🎯</span>
+            <div>
+                <strong>Target tercapai!</strong>
+                <p>Kamu sudah belajar 24 jam minggu ini.</p>
+                <small>1 jam lalu</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div class="modal-overlay" id="quizModal">
+        <div class="quiz-modal">
+            <button class="modal-close" id="closeQuiz">×</button>
+            <div class="quiz-modal-icon">🧠</div>
+            <h2 id="quizTitle">Quiz Integral</h2>
+            <p>Siap menguji kemampuanmu?</p>
+
+            <div class="quiz-rules">
+                <div>
+                    <strong>10</strong>
+                    <span>Soal</span>
+                </div>
+                <div>
+                    <strong>15</strong>
+                    <span>Menit</span>
+                </div>
+                <div>
+                    <strong>100</strong>
+                    <span>Nilai</span>
+                </div>
+            </div>
+
+            <button class="primary-btn full">Mulai Sekarang</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
